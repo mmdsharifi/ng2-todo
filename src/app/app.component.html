@@ -1,3 +1,10 @@
-<h1>
-  {{title}}
-</h1>
+<section id="todoapp">
+
+    <app-todo-list-header (add)="onAddTodo($event)"></app-todo-list-header>
+
+    <app-todo-list (remove)="onRemoveTodo($event)" (toggleComplete)="onToggleTodoComplete($event)" [todos]="todos">
+
+    </app-todo-list>
+    <app-todo-list-footer [todos]="todos"></app-todo-list-footer>
+
+</section>
