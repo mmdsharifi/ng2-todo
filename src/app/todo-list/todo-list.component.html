@@ -1,0 +1,10 @@
+<section id="main" style="display: block;" *ngIf="todos.length > 0">
+    <input id="toggle-all" type="checkbox">
+    <label for="toggle-all">Mark all as complete</label>
+    <ul id="todo-list">
+        <li *ngFor=" let todo of todos" [class.completed]="todo.complete">
+            <app-todo-list-item [todo]="todo" (toggleComplete)="onToggleTodoComplete(todo)" (remove)="onRemoveTodo(todo)">
+            </app-todo-list-item>
+        </li>
+    </ul>
+</section>

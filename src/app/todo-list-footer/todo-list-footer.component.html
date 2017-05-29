@@ -1,0 +1,13 @@
+<footer id="footer" style="display: block;">
+
+    <span id="todo-count"><strong>{{ todos.length }}</strong> {{ todos.length == 1 ? 'item' : 'items'}} left</span>
+
+    <ul id="filters">
+        <li><a href="#/" class="selected">All</a></li>
+        <li><a href="#/active">Active</a></li>
+        <li><a href="#/completed">Completed</a></li>
+    </ul>
+
+    <button id="clear-completed" style="display: none;"></button>
+
+</footer>
